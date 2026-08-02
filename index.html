@@ -7,7 +7,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #f4f6f9; color: #333; padding: 20px 10px; text-align: center; }
-        .container { max-width: 600px; margin: 0 auto; background: #ffffff; padding: 25px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .container { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 25px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
         h1 { color: #1a2b4c; margin-bottom: 10px; font-size: 26px; font-weight: 700; }
         p.subtitle { color: #666; font-size: 15px; margin-bottom: 25px; }
         
@@ -17,8 +17,11 @@
         .btn-phone { background-color: #1a2b4c; color: white; }
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        .section-title { font-size: 18px; color: #1a2b4c; margin: 20px 0 15px; font-weight: 600; text-align: left; border-bottom: 2px solid #eef2f5; padding-bottom: 8px; }
+        .section-title { font-size: 18px; color: #1a2b4c; margin: 25px 0 15px; font-weight: 600; text-align: left; border-bottom: 2px solid #eef2f5; padding-bottom: 8px; }
         
+        .videos { display: flex; flex-direction: column; gap: 15px; }
+        .video-card video { width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #000; }
+
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
         .gallery img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     </style>
@@ -34,7 +37,33 @@
             <a href="tel:+77478958350" class="btn btn-phone">📞 Позвонить</a>
         </div>
 
-        <div class="section-title">Галерея работ</div>
+        <!-- Блок Видео -->
+        <div class="section-title">Видео наших работ</div>
+        <div class="videos">
+            <div class="video-card">
+                <video controls preload="metadata">
+                    <source src="Запись экрана 2026-08-02 134735.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <video controls preload="metadata">
+                    <source src="Запись экрана 2026-08-02 134919.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <video controls preload="metadata">
+                    <source src="Запись экрана 2026-08-02 135532.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <video controls preload="metadata">
+                    <source src="Запись экрана 2026-08-02 135839.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- Галерея фото -->
+        <div class="section-title">Галерея объектов</div>
         <div class="gallery">
             <img src="1.png" alt="MAM LIFT STROY">
             <img src="2.png" alt="MAM LIFT STROY">
@@ -42,8 +71,14 @@
             <img src="4.png" alt="MAM LIFT STROY">
             <img src="5.png" alt="MAM LIFT STROY">
             <img src="6.png" alt="MAM LIFT STROY">
-        </div>
+            <img src="7.png" alt="MAM LIFT STROY">
+            <img src="8.png" alt="MAM LIFT STROY">
+            <img src="9.png" alt="MAM LIFT STROY">
+   </div>
     </div>
 
 </body>
-</html>
+</html>     
+    
+
+
