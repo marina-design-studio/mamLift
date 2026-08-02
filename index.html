@@ -3,82 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAM LIFT STROY | Лифтовое оборудование</title>
+    <title>MAM LIFT STROY | Электронная визитка</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f6f9; color: #333; padding: 20px 10px; text-align: center; }
-        .container { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 25px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
-        h1 { color: #1a2b4c; margin-bottom: 10px; font-size: 26px; font-weight: 700; }
-        p.subtitle { color: #666; font-size: 15px; margin-bottom: 25px; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #f4f6f9; color: #333; padding: 15px 10px; text-align: center; }
         
-        .btn-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
-        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; transition: 0.2s; }
+        .container { max-width: 500px; margin: 0 auto; background: #ffffff; padding: 25px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        
+        .avatar { width: 80px; height: 80px; background: #1a2b4c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px; }
+        h1 { color: #1a2b4c; font-size: 24px; font-weight: 700; margin-bottom: 5px; }
+        p.subtitle { color: #666; font-size: 14px; margin-bottom: 20px; line-height: 1.4; }
+        
+        .nav-menu { display: flex; justify-content: center; gap: 6px; margin-bottom: 25px; flex-wrap: wrap; background: #eef2f5; padding: 8px; border-radius: 14px; }
+        .nav-link { background: #ffffff; color: #1a2b4c; text-decoration: none; padding: 7px 12px; border-radius: 10px; font-size: 12px; font-weight: 600; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+        .nav-link:hover { background: #1a2b4c; color: white; }
+
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 20px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.2s; }
         .btn-whatsapp { background-color: #25D366; color: white; }
         .btn-phone { background-color: #1a2b4c; color: white; }
+        .btn-email { background-color: #e2e8f0; color: #1a2b4c; }
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        .section-title { font-size: 18px; color: #1a2b4c; margin: 25px 0 15px; font-weight: 600; text-align: left; border-bottom: 2px solid #eef2f5; padding-bottom: 8px; }
+        .section-title { font-size: 15px; color: #1a2b4c; margin: 30px 0 15px; font-weight: 700; text-align: left; border-bottom: 2px solid #eef2f5; padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
         
-        .videos { display: flex; flex-direction: column; gap: 15px; }
-        .video-card video { width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #000; }
+        .about-text { font-size: 14px; color: #555; text-align: left; line-height: 1.5; background: #f8fafc; padding: 15px; border-radius: 10px; border-left: 4px solid #1a2b4c; }
+        .director-info { margin-top: 10px; font-weight: 600; color: #1a2b4c; text-align: left; font-size: 13px; }
 
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
-        .gallery img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .videos { display: flex; flex-direction: column; gap: 15px; }
+        .video-card video { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #000; }
+
+        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .gallery a { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: 0.2s; }
+        .gallery a:hover { transform: scale(1.03); }
+        .gallery img { width: 100%; height: 110px; object-fit: cover; display: block; }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <div class="avatar">🏗️</div>
+        
         <h1>MAM LIFT STROY</h1>
         <p class="subtitle">Продажа, монтаж и обслуживание лифтового оборудования</p>
 
+        <div class="nav-menu">
+            <a href="#about" class="nav-link">ℹ️ О нас</a>
+            <a href="#contacts" class="nav-link">📞 Контакты</a>
+            <a href="#videos" class="nav-link">🎥 Видео</a>
+            <a href="#gallery" class="nav-link">🖼️ Фото</a>
+        </div>
+
+        <div id="about" class="section-title">О компании</div>
+        <div class="about-text">
+            Профессиональный монтаж, установка и техническое обслуживание лифтов и подъёмников. Казахстан, Алматы.
+            <div class="director-info">Директор: Babalhan Tolegenov</div>
+        </div>
+
+        <div id="contacts" class="section-title">Контакты</div>
         <div class="btn-group">
-            <a href="https://wa.me/77478958350" class="btn btn-whatsapp" target="_blank">💬 Написать в WhatsApp</a>
-            <a href="tel:+77478958350" class="btn btn-phone">📞 Позвонить</a>
+            <a href="https://wa.me/77088368946" class="btn btn-whatsapp" target="_blank">💬 Написать в WhatsApp</a>
+            <a href="tel:+77088368946" class="btn btn-phone">📞 Позвонить</a>
+            <a href="mailto:babalhan@mail.ru" class="btn btn-email">✉️ babalhan@mail.ru</a>
         </div>
 
-        <!-- Блок Видео -->
-        <div class="section-title">Видео наших работ</div>
+        <div id="videos" class="section-title">Видео наших работ</div>
         <div class="videos">
-            <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="Запись экрана 2026-08-02 134735.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="Запись экрана 2026-08-02 134919.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="Запись экрана 2026-08-02 135532.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="Запись экрана 2026-08-02 135839.mp4" type="video/mp4">
-                </video>
-            </div>
+            <div class="video-card"><video controls preload="metadata"><source src="Запись экрана 2026-08-02 134735.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video controls preload="metadata"><source src="Запись экрана 2026-08-02 134919.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video controls preload="metadata"><source src="Запись экрана 2026-08-02 135532.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video controls preload="metadata"><source src="Запись экрана 2026-08-02 135839.mp4" type="video/mp4"></video></div>
         </div>
 
-        <!-- Галерея фото -->
-        <div class="section-title">Галерея объектов</div>
+        <div id="gallery" class="section-title">Фото объектов</div>
         <div class="gallery">
-            <img src="1.png" alt="MAM LIFT STROY">
-            <img src="2.png" alt="MAM LIFT STROY">
-            <img src="3.png" alt="MAM LIFT STROY">
-            <img src="4.png" alt="MAM LIFT STROY">
-            <img src="5.png" alt="MAM LIFT STROY">
-            <img src="6.png" alt="MAM LIFT STROY">
-            <img src="7.png" alt="MAM LIFT STROY">
-            <img src="8.png" alt="MAM LIFT STROY">
-            <img src="9.png" alt="MAM LIFT STROY">
-   </div>
+            <a href="1.png" target="_blank"><img src="1.png" alt="Лифт 1"></a>
+            <a href="2.png" target="_blank"><img src="2.png" alt="Лифт 2"></a>
+            <a href="3.png" target="_blank"><img src="3.png" alt="Лифт 3"></a>
+            <a href="4.png" target="_blank"><img src="4.png" alt="Лифт 4"></a>
+            <a href="5.png" target="_blank"><img src="5.png" alt="Лифт 5"></a>
+            <a href="6.png" target="_blank"><img src="6.png" alt="Лифт 6"></a>
+            <a href="7.png" target="_blank"><img src="7.png" alt="Лифт 7"></a>
+            <a href="8.png" target="_blank"><img src="8.png" alt="Лифт 8"></a>
+            <a href="9.png" target="_blank"><img src="9.png" alt="Лифт 9"></a>
+            <a href="10.png" target="_blank"><img src="10.png" alt="Лифт 10"></a>
+            <a href="11.png" target="_blank"><img src="11.png" alt="Лифт 11"></a>
+        </div>
     </div>
 
 </body>
-</html>     
-    
-
-
+</html>
